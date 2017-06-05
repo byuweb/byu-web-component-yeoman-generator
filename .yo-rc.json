@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Joseph Moore",
+      "authorEmail": "joseph_moore@byu.edu",
+      "authorUrl": ""
+    }
+  }
+}
