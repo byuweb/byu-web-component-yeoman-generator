@@ -1,0 +1,12 @@
+---
+name: <%= name %>
+description: <%= name %>
+resources:
+  - src: dist/**
+    dest: ./
+entrypoints:
+  "<%= name %>.js": 'Examines browser support and downloads the appropriate component bundle'
+  "<%= name %>.min.js": 'Minified - Examines browser support and downloads the appropriate component bundle'
+  "<%= name %>.css": 'Main CSS file'
+  "<%= name %>.min.css": 'Main CSS file'
+docs: https://github.com/byuweb/<%= name %>

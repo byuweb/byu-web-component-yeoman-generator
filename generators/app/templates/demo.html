@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+  ~  @license
+  ~    Copyright 2017 Brigham Young University
+  ~
+  ~    Licensed under the Apache License, Version 2.0 (the "License");
+  ~    you may not use this file except in compliance with the License.
+  ~    You may obtain a copy of the License at
+  ~
+  ~        http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~    Unless required by applicable law or agreed to in writing, software
+  ~    distributed under the License is distributed on an "AS IS" BASIS,
+  ~    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~    See the License for the specific language governing permissions and
+  ~    limitations under the License.
+  -->
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= name %> Demo</title>
+
+  <link rel="stylesheet" href="dist/<%= name %>.min.css">
+  <script defer src="dist/<%= name %>.min.js"></script>
+
+  <style>
+    #fancy-selector {
+      font-size: 2em;
+    }
+
+    #basic-fancy {
+      font-size: 3em;
+    }
+
+    #fancy-range {
+      width: 400px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Default Fanciness</h1>
+<<%= name %> id="basic-fancy"></<%= name %>>
+
+<h2>How Fancy?</h2>
+<input type="range" min="0" max="20" value="1" id="fancy-range" list="fancyscale"/>
+
+<datalist id="fancyscale">
+  <option value="0" label="Boring"></option>
+  <option value="5" label="Still Boring"></option>
+  <option value="10" label="Less Boring"></option>
+  <option value="15" label="Getting Better"></option>
+  <option value="20" label="Super Fancy!"></option>
+</datalist>
+
+<h2>Customize your fanciness</h2>
+
+<select id="fancy-selector">
+  <option selected>🎩</option>
+  <option>👑</option>
+  <option>👸</option>
+  <option>🤴</option>
+  <option>👗</option>
+  <option>🤵</option>
+  <option>👰</option>
+  <option>🏆</option>
+  <option>🐩</option>
+  <option>🖋️</option>
+</select>
+
+<script>
+  (function () {
+    let range = document.getElementById('fancy-range');
+    let fancy = document.getElementById('basic-fancy');
+
+    range.addEventListener('input', e => {
+      fancy.fancy = range.value;
+    }, false);
+
+    let selector = document.getElementById('fancy-selector');
+
+    selector.addEventListener('change', evt => {
+      fancy.innerHTML = `<template><span>${selector.value}</span></template>`;
+    });
+  })();
+</script>
+
+</body>
+</html>
+
