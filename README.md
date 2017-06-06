@@ -1,4 +1,4 @@
-# generator-byu-web-component [![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-byu-web-component [![NPM version][npm-image]][npm-url] 
 > Generator for BYU Web Components
 
 ## Installation
@@ -23,5 +23,3 @@ Apache-2.0 © [Brigham Young University](https://byu.edu)
 
 [npm-image]: https://badge.fury.io/js/generator-byu-web-component.svg
 [npm-url]: https://npmjs.org/package/generator-byu-web-component
-[daviddm-image]: https://david-dm.org/byuweb/generator-byu-web-component.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/byuweb/generator-byu-web-component
